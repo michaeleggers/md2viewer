@@ -1,0 +1,32 @@
+# Note: dont forget the ;
+# 6 essential lines
+Title ("MD2 Viewer 1.4 for Win9x/NT");
+NumFiles (7);
+RootDirectory ("\MD2 Viewer 1.4");
+TargetDirectory ("%p%r");
+Registry (2, "Software\Microsoft\Windows\CurrentVersion\Uninstall\MD2 Viewer 1.4", "DisplayName", "MD2 Viewer 1.4");
+Registry (2, "Software\Microsoft\Windows\CurrentVersion\Uninstall\MD2 Viewer 1.4", "UninstallString", "%t\uninstaller.exe");
+
+# optional
+MakeDirectory ("%t");
+MoveFile ("md2.exe", "%t\md2.exe");
+MoveFile ("md2_fs.exe", "%t\md2_fs.exe");
+MoveFile ("md2_sm.exe", "%t\md2_sm.exe");
+MoveFile ("md2.rf", "%t\md2.rf");
+MoveFile ("md2.fa", "%t\md2.fa");
+MoveFile ("water.pcx", "%t\water.pcx");
+MoveFile ("mesagl.dll", "%t\mesagl.dll");
+MoveFile ("mesaglu.dll", "%t\mesaglu.dll");
+MoveFile ("info.html", "%t\info.html");
+
+Ask ("Do you want to create shortcuts in the startmenu?");
+        StartMenu ("%t\info.html", "MD2 Viewer 1.4", "MD2 Viewer 1.4 Info");
+        StartMenu ("%t\md2.exe", "MD2 Viewer 1.4", "MD2 Viewer 1.4");
+        StartMenu ("%t\md2_sm.exe", "MD2 Viewer 1.4", "MD2 Viewer Safe Mode");
+        StartMenu ("%t\uninstaller.exe", "MD2 Viewer 1.4", "Uninstall MD2 Viewer 1.4");
+EndAsk ();
+
+# Message ("Congratulations! Installation complete.");
+
+# 1 last essential line
+MoveFile ("uninstaller.exe", "%t\uninstaller.exe");
