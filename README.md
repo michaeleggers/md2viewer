@@ -5,6 +5,7 @@ This program was written by Mete Ciragan - and I think it is
 worth preserving.
 
 # License
+```
 
                  MD2 Viewer (c) 1999 by Mete Ciragan
 
@@ -20,3 +21,4 @@ worth preserving.
 
  email:          mete@swissquake.ch
  web:            http://www.swissquake.ch/chumbalum-soft/
+```
